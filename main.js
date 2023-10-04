@@ -12,19 +12,23 @@ addBtn.addEventListener('click', () => {
     }
     else {
         const li = document.createElement("li");
-        const s = document.createElement("div");
+        const s = document.createElement("span");
+        const p = document.createElement("p");
 
 
 
 
-        li.innerHTML = inputText;
-        // li.appendChild(p);
+        p.innerHTML = inputText;
+        li.appendChild(p);
 
         const editBtn = document.createElement("button");
-        editBtn.innerText = "Edit";;
+        editBtn.innerText = "Edit";
+        editBtn.classList.add("btn" ,"editBtn");
+
 
         const delBtn = document.createElement("button");
         delBtn.innerText = "Remove";
+        delBtn.classList.add("btn" ,"delBtn");
 
 
         s.appendChild(editBtn);
