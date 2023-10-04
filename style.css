@@ -77,20 +77,29 @@ ul {
     width: 100%;
     max-width: 450px;
     margin-top: 25px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    padding: 0;
     background-color: aqua;
+
+
 
 }
 
 ul li {
 
     list-style-type: none;
+
     cursor: pointer;
     border: 0.5px solid gray;
     border-radius: 10px;
-    margin: 10px;
+    margin-block-end: 10px;
     padding: 5px 10px;
+    display: flex;
+
+    justify-content: space-between;
+
 }
+
+/* ul li{
+    flex-grow: 1;
+   
+} */
