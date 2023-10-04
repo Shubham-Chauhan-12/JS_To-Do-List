@@ -58,6 +58,16 @@ todolist.addEventListener('click',(e)=>{
     console.log(e.target.parentElement);
     todolist.removeChild(e.target.parentElement);
  }
+
+
+ if(e.target.innerHTML === "Edit"){
+    console.log(e.target.previousElementSibling.innerHTML);
+    inputbox.value = e.target.previousElementSibling.innerHTML;
+    inputbox.focus();
+    addBtn.value = "Edit";
+
+    // todolist.removeChild(e.target.parentElement);
+ }
 })
 
 
