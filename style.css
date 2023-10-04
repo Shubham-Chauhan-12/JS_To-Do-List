@@ -25,14 +25,16 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background: url(./assets/backgroundimg.jpg);
+    background-size: cover;
 
 
 }
 
 .card {
+    
     border: none;
-
-    padding: 5px 50px;
+    padding: 15px 50px;
     width: 500px;
     height: max-content;
     display: flex;
