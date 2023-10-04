@@ -2,6 +2,8 @@ const inputbox = document.getElementById('inputbox');
 const addBtn = document.getElementById('addBtn');
 const todolist = document.getElementById('todolist');
 
+let editTodo = null;
+
 addBtn.addEventListener('click', () => {
 
     const inputText = inputbox.value.trim();
@@ -13,7 +15,16 @@ addBtn.addEventListener('click', () => {
 
     }
 
+
+
+    else if (addBtn.value === "Edit") {
+        editTodo.target.previousElementSibling.innerHTML = inputText;
+        addBtn.value = "Add";
+        inputbox.value = "";
+    }
+
     else {
+
         const li = document.createElement("li");
         // const s = document.createElement("span");
         const p = document.createElement("p");
@@ -43,31 +54,32 @@ addBtn.addEventListener('click', () => {
 
 
         inputbox.value = "";
-
     }
+
 });
 
 
 
 
-todolist.addEventListener('click',(e)=>{
- alert("work");
- console.log(e.target);
+todolist.addEventListener('click', (e) => {
+    //  alert("work");
+    console.log(e.target);
 
- if(e.target.innerHTML === "Remove"){
-    console.log(e.target.parentElement);
-    todolist.removeChild(e.target.parentElement);
- }
+    if (e.target.innerHTML === "Remove") {
+        console.log(e.target.parentElement);
+        todolist.removeChild(e.target.parentElement);
+    }
 
 
- if(e.target.innerHTML === "Edit"){
-    console.log(e.target.previousElementSibling.innerHTML);
-    inputbox.value = e.target.previousElementSibling.innerHTML;
-    inputbox.focus();
-    addBtn.value = "Edit";
+    if (e.target.innerHTML === "Edit") {
+        console.log(e.target.previousElementSibling.innerHTML);
+        inputbox.value = e.target.previousElementSibling.innerHTML;
+        inputbox.focus();
+        addBtn.value = "Edit";
+        editTodo = e;
 
-    // todolist.removeChild(e.target.parentElement);
- }
+        // todolist.removeChild(e.target.parentElement);
+    }
 })
 
 
