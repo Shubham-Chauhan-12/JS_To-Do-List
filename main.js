@@ -5,14 +5,17 @@ const todolist = document.getElementById('todolist');
 addBtn.addEventListener('click', () => {
 
     const inputText = inputbox.value.trim();
+
+
     if (inputText.length <= 0) {
 
         alert("please write something ...")
 
     }
+
     else {
         const li = document.createElement("li");
-        const s = document.createElement("span");
+        // const s = document.createElement("span");
         const p = document.createElement("p");
 
 
@@ -23,29 +26,38 @@ addBtn.addEventListener('click', () => {
 
         const editBtn = document.createElement("button");
         editBtn.innerText = "Edit";
-        editBtn.classList.add("btn" ,"editBtn");
+        editBtn.classList.add("btn", "editBtn");
 
 
         const delBtn = document.createElement("button");
         delBtn.innerText = "Remove";
-        delBtn.classList.add("btn" ,"delBtn");
+        delBtn.classList.add("btn", "delBtn");
 
 
-        s.appendChild(editBtn);
-        s.appendChild(delBtn);
+        li.appendChild(editBtn);
+        li.appendChild(delBtn);
 
-        li.appendChild(s);
-        
+        // li.appendChild(s);
+
         todolist.appendChild(li);
 
 
         inputbox.value = "";
 
     }
-
-
-
-
-
 });
+
+
+
+
+todolist.addEventListener('click',(e)=>{
+ alert("work");
+ console.log(e.target);
+
+ if(e.target.innerHTML === "Remove"){
+    console.log(e.target.parentElement);
+    todolist.removeChild(e.target.parentElement);
+ }
+})
+
 
