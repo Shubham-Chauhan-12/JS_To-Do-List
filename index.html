@@ -1,27 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To-Do List</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-   <header>TO-Do List</header> 
-   <div class="content">
-    <div>
-        <input type="text" placeholder="Enter the text">
-        <span><button>Add</button> </span>
-        <ul>
-            <li>random task</li>
-            <li>random task</li>
-            <li>random task</li>
-        </ul>
-    </div>
-    
 
-   </div>
-   <footer>Copyright Shubham Chauhan</footer>
-    
+<body>
+    <div>
+        <nav class="navbar fixed-top navbar-dark bg-dark">
+            <div class="container-fluid" id="head">
+                <a class="navbar-brand" href="#">
+                    <img src="assets/cloud.png" alt="" width="30" height="20" class="d-inline-block align-text-top">
+                    To-Do List
+                </a>
+            </div>
+        </nav>
+    </div>
+    <div class="content">
+        <div class="card">
+            <div class="inputdata">
+                <input type="text" placeholder="Add a new To-Do">
+                <input type="button" value="Add">
+            </div>
+            <ul class="todolist">
+                <li>random task</li>
+                <li>random task</li>
+                <li>random task</li>
+            </ul>
+        </div>
+
+    </div>
+    <div>
+        <nav class="navbar fixed-bottom navbar-dark bg-dark" id="footer">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">&copy; Copyright 2023, Shubham Chauhan</a>
+            </div>
+        </nav>
+    </div>
+
 </body>
+
 </html>
