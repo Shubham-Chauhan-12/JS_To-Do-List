@@ -10,6 +10,12 @@
 }
 
 
+#footer a{
+    padding: 0;
+    text-align: center;
+    font-size: small;
+    width: 100%;
+}
 
 .content {
 
