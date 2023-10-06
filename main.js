@@ -54,6 +54,8 @@ addBtn.addEventListener('click', () => {
 
 
         inputbox.value = "";
+
+        saveInLocal(inputText);
     }
 
 });
@@ -81,5 +83,15 @@ todolist.addEventListener('click', (e) => {
         // todolist.removeChild(e.target.parentElement);
     }
 })
+
+
+const saveInLocal=(data)=>{
+
+    let dataList = [];
+   // dataList = localStorage.getItem("dataList");
+    dataList.push(data);
+    console.log(dataList);
+    localStorage.setItem("dataList",JSON.stringify(dataList));
+}
 
 
